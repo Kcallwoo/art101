@@ -5,5 +5,16 @@
     padding: 10px;
     margin-bottom: 10px;
     border: solid 1px #888;
-    background-color: #DDD8C4;
+    background-color: #fcf3fb;
+  }
+
+  h4 {
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: center;
+    border-color: peru;
+    width: 90%;
+    border-style: solid;
+    padding: 10px;
+    margin-left: 50px; 
   }

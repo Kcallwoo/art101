@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - Subject/Topic</title>
+	<title>Lab 4 - Pseudocoding and Problem-solving</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -23,25 +23,104 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
+			<h1>Lab 4 - Pseudocoding and Problem-solving</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+					<p>The challenge of this lab is to pseudocode an everyday task and a computer game.</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
-			</div>
-
-			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
+					<p>We had difficulty understanding typical language used in code which made it difficult to transfer to pseudocode.</p>
+					<div id="output"></div>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
-					<div id="output"></div>
+					<p>We successfully wrote pseudocode for making a Ristretto coffee as well as writing out both high level and specific pseudocode for a ping poll game. Both of these were inserted into our html file.</p>
+					<h3>Ristretto Coffee Steps</h3>
+					<p>We made a general list of steps necessary to make a Ristretoo coffee, one of the most difficult coffees to make. This is a relatively short list to help beginners:</p>
+					<center>
+						<pre><code>
+							<ol> 
+								<li>Use 18 grams of espresso roast coffee for a double shot </li>
+								<li> Grind the coffee until very fine</li>
+								<li> Add the coffee grounds to an espresso basket (portafilter) until heaping over the top</li>
+								<li> Place the portafilter in a folded towel</li>
+								<li>Use a tamper to firmly press grounds evenly into the portafilter</li>
+								<li> Ensure coffee grounds are as even as possible </li>
+								<li> Place the portafilter in the espresso machine </li>
+								<li>Press the button to pull the shot using Manually Mode</li>
+								<li>Make sure it lasts 15 to 20 seconds and results in 1 1/2 ounces of coffee with a cream-colored crema</li>
+							</ol>
+						</pre></code>
+					</center>
+						<center>
+							<img class="coffee" src="img/ristretto.jpg" width="350">
+						</center>
+					<h3>Ping Pong Game</h3>
+					<p>We chose to pseudocode a game of ping-pong. While the high level pseudocode was easy to write and understand, the more specific pseudocode in JavaScript took awhile to write out in an accurate manner.</p>
+					<h4>High-Level Pseudocode</h4>
+					<center>
+						<pre><code>
+							<ol>
+								<li>Initialize game variables</li>
+								<li>Print the score of players before each round</li>
+								<li>Accept user input </li>
+								<li> Update player 1 and 2 inputs</li>
+								<li>Update ball position</li>
+								<li>Check for collision with walls and paddles</li>
+								<li>Test win condition based on player score of 10</li>
+							</ol>
+						</pre></code>
+					</center>
+					<h4>Javascript Pseudocode</h4>
+					<pre><code>
+						// Initialize player 1 score to 0  
+						// Initialize player 2 score to 0  
+						// Initialize ball position x axis (ball_x) to 0  
+						// Initialize ball position y axis (ball_y) to 0 
+						// Initialize derivative with respect to x of ball (ball_dx) to 1 
+						// Initialize derivative with respect to y of ball (ball_dy) to 1 
+						// Set winning score to 10 
+						// Print score of each player starting at 0 
+						// Loop while game running: 
+							// If key “w” is pressed, player 1 score is subtracted by 1  point
+								// Update player 1 score
+								// Print player 1 score
+							// Else-if “s” is pressed, player 1 score is added 1 point
+								// Update Player 1 score
+								// Print player 1 score
+							// If “up arrow” is pressed, player 2 score is subtracted by 1 point 
+								// Update player 2 score
+								// Print player 2 score
+							// Else-if  “down arrow” is pressed, player 2 score is added 1 point 
+								// Update player 2 score
+								// Print player 2 score
+						// Update the the ball_x variable by adding the ball_dx variable to it 
+						// Update the the ball_y variable by adding the ball_dy variable to it 
+						// If ball_y is equal to 0
+							// subtract 1 from ball_dy 
+						// If ball_x is equal to 0
+							// Player 2 score is added 1 point 
+							// Reset ball position
+						// Else if ball_x is equal to the screen width - 1
+							// Player 1 score is added 1 point 
+							// Reset ball position
+						// If ball_x is equal to 1 and player 1 score is less than or equal to ball_y which is less than player 1 score plus the paddle
+							height 
+							// Multiply the current value of ball_dx by -1 which reverses the direction of the horizontal motion    
+						// Else-if ball_x is equal to screen width - 2 and player 2 score is less than or equal to ball_y which is less than 
+							player 2 score plus the paddle height 
+							// Multiply the current value of ball_dx by -1 which reverses the direction of the horizontal motion    
+						// If player 1 score is equal to 10, 
+							// Print “player 1 is the winner”
+						// If player 2 score is equal to 10, 
+							// Print “player 2 is the winner”
+					</pre></code>
+					<center>
+						<img class="ping" src="img/ping-pong.png" width="350">
+					</center>
 			</div>
 		</section>
 		<nav id="links">
