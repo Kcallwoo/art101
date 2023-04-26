@@ -1,8 +1,21 @@
 // index.js - purpose and description here
-// Author: Your Name
-// Date:
+// Author: Kamryn Callwood
+// Date: 27 April 2023
 
-// Constants
+// Constants/Variables 
+make = "lamborghini";
+model = "urus";
+color = "red";
+year = 2017;
+ownIt = false;
+age = 2023 - year;
+
+// Output
+document.writeln("Make: " + make + "<br>");
+document.writeln("Model: " + model + "<br>");
+document.writeln("Color: " + color + "<br>");
+document.writeln("Year: " + year + "<br>");
+document.writeln("Age: " + age + "<br>");
 
 // Functions
 
