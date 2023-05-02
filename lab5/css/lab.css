@@ -7,3 +7,11 @@
     border: solid 1px #888;
     background-color: #DDD8C4;
   }
+  
+  #content {
+    background-image: linear-gradient(red, yellow);
+    border: solid 3px #000000;
+    background-size: contain;
+    display: block;
+    block-size: 95%;
+  }
