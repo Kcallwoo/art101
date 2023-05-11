@@ -25,10 +25,21 @@ var result = array.map(function(x){
 })
 console.log("Array to the third power:", result);
 
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
+// Create a function that joings two separate strings into one string
+function joinStrings(str1, str2) {
+  return str1 + " " + str2;
 }
+
+// test
+console.log(joinStrings("hello", "world"));
+
+// Create an array of strings to apply function to 
+var array = [["hello", "world"], ["kamryn", "callwood"], ["Eri", "Foulds"]];
+console.log(array);
+
+// apply joinStrings() to each pair of strings in the array
+var results = array.map(pair => joinStrings(pair[0], pair[1]));
+console.log(results);
 
 // let's get this party started
 main();
