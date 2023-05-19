@@ -32,6 +32,9 @@ button {
   border-radius: 10px;s;
 }
 
+.color-change {
+  color: white /* Change this to the desired color */
+}
 
 * {box-sizing:border-box}
 

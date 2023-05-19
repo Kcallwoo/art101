@@ -10,21 +10,37 @@ function create_buttons() {
   var buttonOne = $("<button>").text("Click Me");
   var buttonTwo = $("<button>").text("Click Me");
   var buttonThree = $("<button>").text("Click Me");
+  var buttonFour = $("<button>").text("Change Color");
 
   sectOne.find("h2").after(buttonOne);
   sectTwo.find("h2").after(buttonTwo);
   sectThree.find("h2").after(buttonThree);
+  sectThree.find("h2").after(buttonFour);
+
+  var outputOne = sectOne.find("#output");
+  var outputTwo = sectTwo.find("#output");
+  var outputThree = sectThree.find("#output");
+
+  outputOne.hide();
+  outputTwo.hide();
+  outputThree.hide();
 
   buttonOne.click(function() {
-    sectOne.find(".special").toggle(); // Toggle the visibility of paragraph tags in section one
+    outputOne.toggle(); // Toggle the visibility of paragraph tags in section one
   });
 
   buttonTwo.click(function() {
-    sectTwo.find(".special").toggle(); // Toggle the visibility of paragraph tags in section two
+    outputTwo.toggle(); // Toggle the visibility of paragraph tags in section two
   });
 
   buttonThree.click(function() {
-    sectThree.find(".special").toggle(); // Toggle the visibility of paragraph tags in section three
+    outputThree.toggle(); // Toggle the visibility of paragraph tags in section three
+  });
+
+  buttonFour.click(function() {
+    buttonOne.toggleClass("color-change"); // Toggle the "color-change" class on buttonOne
+    buttonTwo.toggleClass("color-change"); // Toggle the "color-change" class on buttonTwo
+    buttonThree.toggleClass("color-change"); // Toggle the "color-change" class on buttonThree
   });
 }
 
@@ -34,6 +50,7 @@ function main() {
 }
 
 main();
+
 
 
 
