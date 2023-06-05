@@ -1,34 +1,33 @@
 // Kamryn Callwood
 // Lab 16 - JSON and APIs
 
-// Using the core $.ajax() method
-$.ajax({
-  // The URL for the request (from the XKCD API docs)
-  url: "https://xkcd.com/info.0.json",
-  // Whether this is a POST or GET request
-  type: "GET",
-  // The type of data we expect back
-  dataType: "json",
-  // What do we do when the API call is successful
-  // all the action goes in here
-  success: function (comicObj) {
-    // Process the parts and add them to your webpage
-    var title = comicObj.title; // Get the comic title
-    var imgSrc = comicObj.img; // Get the image URL
-    var altText = comicObj.alt; // Get the alt text
+var comicNumber = 0;
 
-    // Add the title to the webpage
-    $("body").append("<h2>" + title + "</h2>");
+function getData(number) {
+  $.ajax({
+    url: `https://xkcd.com/${number}/info.0.json`,
+    type: "GET",
+    dataType: "json",
+    success: function (data) {
+      $("#comic").html("<h2>" + data.title + "</h2>");
+      $("#comic").append("<img src='" + data.img + "' alt='" + data.alt + "' title='" + data.alt + "'>");
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.log("Error", textStatus, errorThrown);
+    }
+  });
+}
 
-    // Create an image tag with the appropriate attributes
-    var imgTag = $("<img>").attr("src", imgSrc).attr("alt", altText).attr("title", altText);
+$(document).ready(function () {
+  getData(comicNumber);
 
-    // Add the image tag to the webpage
-    $("body").append(imgTag);
-  },
-  // What we do if the API call fails
-  error: function (jqXHR, textStatus, errorThrown) {
-    // Handle the error
-    console.log("Error:", textStatus, errorThrown);
-  },
+  $("#next").click(function () {
+    comicNumber++;
+    getData(comicNumber);
+  });
+
+  $("#previous").click(function () {
+    omicNumber--;
+    getData(comicNumber);
+  });
 });
